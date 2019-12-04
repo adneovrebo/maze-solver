@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Maze Solver</title>
+  </head>
+  <body>
+    <div class="d-flex justify-content-center flex-wrap mt-5">
+      <div class="p-2">
+        <div class="mt-5">
+          <h1>Maze Solver</h1>
+          <h2><span id="length" class="mt-3"></span></h2>
+          <div class="mt-3" style="align-content: center;">
+            <span>Start character: </span
+            ><input type="text" value="*" id="start" style="width:30px;" />
+            <br />
+          </div>
+          <div class="mt-3">
+            <span>Finish character: </span
+            ><input type="text" value="-" id="end" style="width:30px;" /> <br />
+          </div>
+          <div class="mt-3">
+            <span>Wall character: </span
+            ><input type="text" value="#" id="wall" style="width:30px;" />
+            <br />
+          </div>
+          <div class="mt-3 mb-3">
+            <span>Path character:</span
+            ><input type="text" value=" " id="path" style="width:30px;" /><span>
+              (Often a space)
+            </span>
+            <br />
+          </div>
+
+          <input type="file" name="file" id="file" />
+          <div>
+            <a
+              href="./example-mazes/large.txt"
+              download
+              target="_blank"
+              class="btn btn-primary mt-3"
+              >Download example maze</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://github.com/adneovrebo/maze-solver"
+              download
+              target="_blank"
+              class="btn btn-primary mt-3"
+              style="color:black;"
+              >Github repo <img src="images/github.png" height="20px" alt="github logo"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-2">
+        <canvas width="500" height="500"></canvas>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center flex-wrap mt-5">
+      <div class="p-2">
+        <h2>
+          How to find the shortest path in my maze?
+        </h2>
+        <ol>
+          <li>Create a maze file</li>
+          <ul>
+            <li>First line must be horizontal length</li>
+            <li>Second line must be vertical length</li>
+            <li>Remember to add a start and finish</li>
+          </ul>
+          <li>Set the characters you used to create the maze</li>
+          <li>The shortest path will display in the white canvas</li>
+        </ol>
+
+        <h4>Example maze: <img src="images/example.png" alt="example maze" /></h4>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
